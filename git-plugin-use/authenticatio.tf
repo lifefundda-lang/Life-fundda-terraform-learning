@@ -1,4 +1,4 @@
 provider "github" {
-    token = var.git_token
+  token = var.git_token
 }
 
