@@ -1,5 +1,5 @@
 resource "aws_instance" "First-Terraform-Instance" {
-  ami           = "ami-0c834c075b3201569"
+  ami           = data.aws_ami.ubuntu.id
   instance_type = "t3.micro"
 
   tags = {
@@ -7,35 +7,7 @@ resource "aws_instance" "First-Terraform-Instance" {
   }
   key_name               = aws_key_pair.Key-Pair.key_name
   vpc_security_group_ids = [aws_security_group.allow_tls.id]
-  user_data              = <<-EOF
-              #!/bin/bash
-              sudo apt-get update
-              sudo apt-get install nginx
-
-             sudo echo "its lifehood from life_restart" >/var/www/html/index.nginx-debian.html"
-              EOF
-
-
-  provisioner "file" {
-    source      = "${path.module}/file.txt"
-    destination = "/tmp/file.txt"
-  }
-  connection {
-    type = "ssh"
-    user = "ubuntu"
-    private_key = file("${path.module}/id_rsa")
-    host = "${aws_instance.First-Terraform-Instance.public_ip}"
-  }
-  provisioner "file" {
-    source      = "file.txt"
-    destination = "/tmp/file.txt"
-
-  }
-    provisioner "data" {
-    content    = "this is a test file for data provisioner for youtube video"
-    destination = "/tmp/content.txt"
-
-  }
+ 
 
 }
 

@@ -15,28 +15,24 @@ resource "aws_instance" "First-Terraform-Instance" {
              sudo echo "its lifehood from life_restart" >/var/www/html/index.nginx-debian.html"
               EOF
 
-
-  provisioner "file" {
-    source      = "${path.module}/file.txt"
-    destination = "/tmp/file.txt"
-  }
   connection {
-    type = "ssh"
-    user = "ubuntu"
+    type        = "ssh"
+    user        = "ubuntu"
     private_key = file("${path.module}/id_rsa")
-    host = "${aws_instance.First-Terraform-Instance.public_ip}"
+    host        = aws_instance.First-Terraform-Instance.public_ip
   }
+
+  # File, local-exec, remote-exec
   provisioner "file" {
     source      = "file.txt"
     destination = "/tmp/file.txt"
 
   }
-    provisioner "data" {
-    content    = "this is a test file for data provisioner for youtube video"
+  provisioner "file" {
+    content     = "this is a test file for data provisioner for youtube video"
     destination = "/tmp/content.txt"
 
   }
-
 }
 
 

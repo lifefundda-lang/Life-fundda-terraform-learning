@@ -1,0 +1,41 @@
+
+Windows IP Configuration
+
+
+Ethernet adapter Ethernet 2:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . : 
+
+Wireless LAN adapter Local Area Connection* 9:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . : 
+
+Wireless LAN adapter Wi-Fi:
+
+   Connection-specific DNS Suffix  . : domain.name
+   IPv6 Address. . . . . . . . . . . : 2401:4900:88b8:a56:70b7:c021:7ecd:1ff3
+   Temporary IPv6 Address. . . . . . : 2401:4900:88b8:a56:5892:4235:ece0:aacd
+   Link-local IPv6 Address . . . . . : fe80::70b7:c021:7ecd:1ff3%16
+   IPv4 Address. . . . . . . . . . . : 192.168.1.6
+   Subnet Mask . . . . . . . . . . . : 255.255.255.0
+   Default Gateway . . . . . . . . . : fe80::c69a:31ff:fe73:5f88%16
+                                       192.168.1.1
+
+Ethernet adapter Bluetooth Network Connection:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . : 
+
+Tunnel adapter isatap.domain.name:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . : domain.name
+
+Tunnel adapter Local Area Connection* 12:
+
+   Connection-specific DNS Suffix  . : 
+   IPv6 Address. . . . . . . . . . . : 2001:0:14c9:d206:2009:a751:204a:b0c9
+   Link-local IPv6 Address . . . . . : fe80::2009:a751:204a:b0c9%13
+   Default Gateway . . . . . . . . . : 
